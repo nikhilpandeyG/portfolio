@@ -88,13 +88,13 @@ const App = () => {
     {
       degree: "Master of Computer Applications (MCA)",
       institution: "IGNOU University",
-      year: "2021",
+      year: "2018 - 2021",
       focus: "Information Technology"
     },
     {
       degree: "Bachelor of Computer Applications (BCA)",
       institution: "Guru Gobind Singh Indraprastha University",
-      year: "2012",
+      year: "2009 - 2012",
       focus: "Computer Science"
     }
   ];
@@ -169,6 +169,20 @@ const App = () => {
         "Mentored junior security engineers on security best practices"
       ],
       tech: ["Fortinet", "Cisco ASA", "Vulnerability Management", "SIEM"]
+    },
+    {
+      company: "Leading IT Services Provider",
+      role: "Network Security Engineer",
+      period: "July 2012 - March 2015",
+      location: "India",
+      description: "Managed network security infrastructure and firewall operations for a global IT services company. Supported enterprise security operations and incident response.",
+      achievements: [
+        "Managed enterprise firewall infrastructure and VPN solutions",
+        "Provided L2/L3 support for network security incidents",
+        "Implemented security policies and access control lists",
+        "Supported network security operations for global clients"
+      ],
+      tech: ["Cisco ASA", "VPN", "Network Security", "Firewall Management"]
     }
   ];
 
