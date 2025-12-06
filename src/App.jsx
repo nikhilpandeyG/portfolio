@@ -86,16 +86,25 @@ const App = () => {
 
   const education = [
     {
-      degree: "Master of Computer Applications (MCA)",
-      institution: "IGNOU University",
-      year: "2018 - 2021",
-      focus: "Information Technology"
+      degree: "Post Graduate Diploma in Cyber Law and Cyber Forensic (PGDCLCF)",
+      institution: "National Law School of India University",
+      year: "2024 - 2025",
+      focus: "Cyber Law and Cyber Forensic",
+      grade: "Grade: A"
     },
     {
-      degree: "Bachelor of Computer Applications (BCA)",
-      institution: "Guru Gobind Singh Indraprastha University",
-      year: "2009 - 2012",
-      focus: "Computer Science"
+      degree: "Master's in Information Security (MSc Infosec.)",
+      institution: "Indira Gandhi National Open University",
+      year: "2022 - 2024",
+      focus: "Information Security",
+      grade: "First Division"
+    },
+    {
+      degree: "Bachelor of Technology (B.Tech)",
+      institution: "IEC College of Engineering & Technology",
+      year: "2007 - 2011",
+      focus: "Electronics & Communication Engineering",
+      grade: "First Division"
     }
   ];
 
@@ -441,7 +450,7 @@ const App = () => {
           <div className="text-center mb-12">
             <GraduationCap className="w-12 h-12 text-blue-400 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Education</h2>
-            <p className="text-slate-400">Academic foundation in Computer Science and Information Technology</p>
+            <p className="text-slate-400">Academic foundation in Engineering, Information Security, and Cyber Law</p>
           </div>
 
           <div className="space-y-6">
@@ -454,7 +463,8 @@ const App = () => {
                   </div>
                   <span className="text-sm font-mono text-blue-400 bg-blue-900/20 px-3 py-1 rounded mt-2 sm:mt-0">{edu.year}</span>
                 </div>
-                <p className="text-slate-500 text-sm mt-2">Focus: {edu.focus}</p>
+                <p className="text-slate-500 text-sm mt-2">Specialization: {edu.focus}</p>
+                {edu.grade && <p className="text-green-400 text-sm mt-1 font-semibold">{edu.grade}</p>}
               </div>
             ))}
           </div>
