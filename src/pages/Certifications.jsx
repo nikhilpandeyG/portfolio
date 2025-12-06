@@ -1,8 +1,14 @@
-import React from 'react';
-import { Award, ArrowLeft, GraduationCap, Shield, Cloud } from 'lucide-react';
+import React, { useState } from 'react';
+import { Award, ArrowLeft, GraduationCap, Shield, Cloud, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Certifications = () => {
+  const [imageErrors, setImageErrors] = useState({});
+
+  const handleImageError = (idx) => {
+    setImageErrors(prev => ({ ...prev, [idx]: true }));
+  };
+
   const certifications = [
     {
       name: "Microsoft Certified Azure Solutions Architect Expert",
@@ -167,26 +173,36 @@ const Certifications = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {certifications.map((cert, idx) => (
-              <div key={idx} className="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-yellow-500/30 transition-all hover:transform hover:scale-105 group">
-                <div className="flex items-start gap-4">
-                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${cert.color} p-0.5 flex-shrink-0`}>
-                    <div className="w-full h-full bg-white rounded-lg flex items-center justify-center p-2">
-                      <img 
-                        src={cert.logo} 
-                        alt={cert.provider}
-                        className="w-full h-full object-contain"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center"><svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg></div>`;
-                        }}
-                      />
+              <div key={idx} className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-yellow-500/50 transition-all hover:transform hover:scale-[1.02] group shadow-lg">
+                <div className="flex items-start gap-6">
+                  <div className={`w-24 h-24 rounded-xl bg-gradient-to-br ${cert.color} p-1 flex-shrink-0 shadow-lg`}>
+                    <div className="w-full h-full bg-white rounded-lg flex items-center justify-center p-3">
+                      {imageErrors[idx] ? (
+                        <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${cert.color} rounded-lg`}>
+                          <Award className="w-12 h-12 text-white" />
+                        </div>
+                      ) : (
+                        <img 
+                          src={cert.logo} 
+                          alt={cert.provider}
+                          className="w-full h-full object-contain"
+                          onError={() => handleImageError(idx)}
+                        />
+                      )}
                     </div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="text-xs font-semibold text-blue-400 mb-1">{cert.provider}</div>
-                    <h3 className="text-sm font-medium text-slate-200 leading-tight">{cert.name}</h3>
+                    <div className="flex items-center gap-2 mb-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-sm font-bold text-blue-400 uppercase tracking-wide">{cert.provider}</span>
+                    </div>
+                    <h3 className="text-base font-semibold text-slate-100 leading-snug mb-2">{cert.name}</h3>
+                    <div className="inline-flex items-center gap-1 px-3 py-1 bg-slate-950/50 rounded-full">
+                      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                      <span className="text-xs text-slate-400">Certified</span>
+                    </div>
                   </div>
                 </div>
               </div>
