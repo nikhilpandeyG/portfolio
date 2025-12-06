@@ -1,29 +1,129 @@
 import React from 'react';
-import { Award, ArrowLeft, GraduationCap } from 'lucide-react';
+import { Award, ArrowLeft, GraduationCap, Shield, Cloud } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Certifications = () => {
   const certifications = [
-    "Microsoft Certified Azure Solutions Architect Expert",
-    "AWS Solution Architect Professional",
-    "Google Professional Cloud Architect",
-    "Microsoft Certified Azure Security Engineer",
-    "Amazon Web Services Security Specialty",
-    "Google Cloud Certified Professional Cloud Security Engineer",
-    "Zscaler Zero Trust Certified Associate (ZTCA)",
-    "ISO/IEC 27001:2022 Lead Auditor",
-    "ISO/IEC 27001 Information Security Associate",
-    "CompTIA Certified Security Plus - Security +",
-    "CompTIA Certified Cybersecurity Analyst - CYSA+",
-    "CompTIA Certified PenTest +",
-    "Palo Alto Networks Certified Network Security Engineer",
-    "Cisco Certified Network Associate Security",
-    "Microsoft Certified: Security Operations Analyst Associate",
-    "Barracuda Web Application Firewall",
-    "Fortinet NSE 2 Network Security Expert Associate",
-    "Certified Network Security Specialist - ICSI UK",
-    "Microsoft Certified Azure Administrator Associate",
-    "Cisco Certified Network Associate Routing and Switching"
+    {
+      name: "Microsoft Certified Azure Solutions Architect Expert",
+      provider: "Microsoft",
+      logo: "https://images.credly.com/size/340x340/images/987adb7e-49be-4e24-b67e-55986bd3fe66/azure-solutions-architect-expert-600x600.png",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "AWS Solution Architect Professional",
+      provider: "Amazon Web Services",
+      logo: "https://images.credly.com/size/340x340/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png",
+      color: "from-orange-500 to-yellow-500"
+    },
+    {
+      name: "Google Professional Cloud Architect",
+      provider: "Google Cloud",
+      logo: "https://templates.images.credential.net/16590187933301617801540872729153.png",
+      color: "from-red-500 to-blue-500"
+    },
+    {
+      name: "Microsoft Certified Azure Security Engineer",
+      provider: "Microsoft",
+      logo: "https://images.credly.com/size/340x340/images/1ad16b6f-2c71-4a2e-ae74-ec69c4766039/azure-security-engineer-associate600x600.png",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Amazon Web Services Security Specialty",
+      provider: "Amazon Web Services",
+      logo: "https://images.credly.com/size/340x340/images/53acdae5-d69f-4dda-b650-d02ed7a50dd7/image.png",
+      color: "from-orange-500 to-yellow-500"
+    },
+    {
+      name: "Google Cloud Certified Professional Cloud Security Engineer",
+      provider: "Google Cloud",
+      logo: "https://templates.images.credential.net/16590181582433100721069374870524.png",
+      color: "from-red-500 to-blue-500"
+    },
+    {
+      name: "Zscaler Zero Trust Certified Associate (ZTCA)",
+      provider: "Zscaler",
+      logo: "https://www.zscaler.com/themes/custom/zscaler/logo.svg",
+      color: "from-blue-600 to-indigo-600"
+    },
+    {
+      name: "ISO/IEC 27001:2022 Lead Auditor",
+      provider: "ISO",
+      logo: "https://cdn-icons-png.flaticon.com/512/6404/6404100.png",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      name: "ISO/IEC 27001 Information Security Associate",
+      provider: "ISO",
+      logo: "https://cdn-icons-png.flaticon.com/512/6404/6404100.png",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      name: "CompTIA Certified Security Plus - Security +",
+      provider: "CompTIA",
+      logo: "https://images.credly.com/size/340x340/images/74790a75-8451-400a-8536-92d792084d82/CompTIA_Security_2Bce.png",
+      color: "from-red-600 to-red-700"
+    },
+    {
+      name: "CompTIA Certified Cybersecurity Analyst - CYSA+",
+      provider: "CompTIA",
+      logo: "https://images.credly.com/size/340x340/images/0b3fbb6c-23e3-48b1-b3af-e0062c91e0f6/CompTIA_CySA_2B.png",
+      color: "from-red-600 to-red-700"
+    },
+    {
+      name: "CompTIA Certified PenTest +",
+      provider: "CompTIA",
+      logo: "https://images.credly.com/size/340x340/images/ec6c6d08-4c71-49c0-98f3-dfbe2e98c5aa/CompTIA_PenTest_2B.png",
+      color: "from-red-600 to-red-700"
+    },
+    {
+      name: "Palo Alto Networks Certified Network Security Engineer",
+      provider: "Palo Alto Networks",
+      logo: "https://www.paloaltonetworks.com/content/dam/pan/en_US/images/logos/brand/primary-company-logo/Parent-logo.png",
+      color: "from-orange-600 to-red-600"
+    },
+    {
+      name: "Cisco Certified Network Associate Security",
+      provider: "Cisco",
+      logo: "https://images.credly.com/size/340x340/images/e4c7c996-8f0f-4d3a-b1c8-1d9c1dfac0dc/cisco_ccna_R_26S.png",
+      color: "from-blue-700 to-cyan-600"
+    },
+    {
+      name: "Microsoft Certified: Security Operations Analyst Associate",
+      provider: "Microsoft",
+      logo: "https://images.credly.com/size/340x340/images/c34a6df4-c7bd-461b-ac13-3c5554e89e7e/image.png",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Barracuda Web Application Firewall",
+      provider: "Barracuda",
+      logo: "https://cdn-icons-png.flaticon.com/512/2920/2920277.png",
+      color: "from-blue-600 to-purple-600"
+    },
+    {
+      name: "Fortinet NSE 2 Network Security Expert Associate",
+      provider: "Fortinet",
+      logo: "https://images.credly.com/size/340x340/images/4c6a2e52-ddf3-4b5e-b05c-a4c86291b5fa/image.png",
+      color: "from-red-700 to-orange-600"
+    },
+    {
+      name: "Certified Network Security Specialist - ICSI UK",
+      provider: "ICSI",
+      logo: "https://cdn-icons-png.flaticon.com/512/2913/2913133.png",
+      color: "from-indigo-600 to-purple-600"
+    },
+    {
+      name: "Microsoft Certified Azure Administrator Associate",
+      provider: "Microsoft",
+      logo: "https://images.credly.com/size/340x340/images/336eebfc-0ac3-4553-9a67-b402f491f185/azure-administrator-associate-600x600.png",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      name: "Cisco Certified Network Associate Routing and Switching",
+      provider: "Cisco",
+      logo: "https://images.credly.com/size/340x340/images/a31c0301-ff96-4cee-9435-0a4b40ce6e66/cisco_ccna_R_26S_legacy.png",
+      color: "from-blue-700 to-cyan-600"
+    }
   ];
 
   const education = [
@@ -67,13 +167,28 @@ const Certifications = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {certifications.map((cert, idx) => (
-              <div key={idx} className="flex items-center gap-3 p-4 bg-slate-900 border border-slate-800 rounded-lg hover:border-yellow-500/30 transition-all hover:transform hover:scale-105 group">
-                <div className="p-2 bg-slate-950 rounded group-hover:bg-yellow-900/20 transition-colors">
-                  <Award className="w-4 h-4 text-yellow-500" />
+              <div key={idx} className="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-yellow-500/30 transition-all hover:transform hover:scale-105 group">
+                <div className="flex items-start gap-4">
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${cert.color} p-0.5 flex-shrink-0`}>
+                    <div className="w-full h-full bg-white rounded-lg flex items-center justify-center p-2">
+                      <img 
+                        src={cert.logo} 
+                        alt={cert.provider}
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center"><svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg></div>`;
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs font-semibold text-blue-400 mb-1">{cert.provider}</div>
+                    <h3 className="text-sm font-medium text-slate-200 leading-tight">{cert.name}</h3>
+                  </div>
                 </div>
-                <span className="text-sm font-medium text-slate-200">{cert}</span>
               </div>
             ))}
           </div>
