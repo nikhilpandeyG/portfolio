@@ -51,14 +51,22 @@ const App = () => {
     "AWS Solution Architect Professional",
     "Google Professional Cloud Architect",
     "Microsoft Certified Azure Security Engineer",
-    "AWS Security Specialty",
-    "Google Cloud Professional Cloud Security Engineer",
+    "Amazon Web Services Security Specialty",
+    "Google Cloud Certified Professional Cloud Security Engineer",
+    "Zscaler Zero Trust Certified Associate (ZTCA)",
     "ISO/IEC 27001:2022 Lead Auditor",
-    "Zscaler Zero Trust Certified Associate",
+    "ISO/IEC 27001 Information Security Associate",
+    "CompTIA Certified Security Plus - Security +",
+    "CompTIA Certified Cybersecurity Analyst - CYSA+",
+    "CompTIA Certified PenTest +",
     "Palo Alto Networks Certified Network Security Engineer",
+    "Cisco Certified Network Associate Security",
+    "Microsoft Certified: Security Operations Analyst Associate",
+    "Barracuda Web Application Firewall",
+    "Fortinet NSE 2 Network Security Expert Associate",
+    "Certified Network Security Specialist - ICSI UK",
     "Microsoft Certified Azure Administrator Associate",
-    "Oracle Cloud Infrastructure 2024 Certified Architect Professional",
-    "Certified Information Security Manager (CISM)"
+    "Cisco Certified Network Associate Routing and Switching"
   ];
 
   const achievements = [
@@ -111,87 +119,104 @@ const App = () => {
   const experiences = [
     {
       company: "Global Telecommunications Leader",
-      role: "Manager & Security Architect",
+      role: "Manager & Security Architect (Security Product Development & Data Engineering)",
       period: "April 2024 - Present",
       location: "India",
-      description: "Leading Platform Integration and Automation for a Fortune Global 500 telecommunications giant. Managing enterprise-scale SIEM/SOAR implementations, security orchestration, and threat intelligence programs serving millions of customers globally.",
+      description: "Leading Platform, Integration, and Automation initiatives for a Fortune Global 500 telecommunications giant. Architecting scalable, secure, high-availability enterprise solutions and standardizing SOAR workflows with MITRE ATT&CK mapping.",
       achievements: [
-        "Architected automated threat detection and response frameworks",
-        "Led integration of multiple security platforms (SIEM, SOAR, Threat Intelligence)",
-        "Implemented MITRE ATT&CK-based detection engineering",
-        "Reduced security incident response time by 70% through automation"
+        "Spearheaded architecture for Platform, Integration, and Automation delivering scalable enterprise solutions",
+        "Led Playbook Team, standardizing best practices for SOAR workflows and MITRE ATT&CK mapping",
+        "Architected integrations between SIEM (IBM QRadar, Microsoft Sentinel, Securonix) and SOAR platforms (XSOAR, Logic Apps)",
+        "Designed automation frameworks using Terraform, GitLab, and Python, significantly reducing manual intervention",
+        "Delivered technical leadership for endpoint protection (CrowdStrike, Defender) and vulnerability management (Qualys, Tenable)",
+        "Automated security testing and monitoring processes maintaining compliance"
       ],
-      tech: ["Sentinel", "XSOAR", "Python", "Terraform", "QRadar"]
+      tech: ["QRadar", "Sentinel", "Securonix", "XSOAR", "Logic Apps", "Terraform", "Python", "CrowdStrike", "Defender", "Qualys", "Tenable"]
     },
     {
       company: "Top 10 Global IT Services Firm",
-      role: "Principal Security Architect",
+      role: "Senior Manager - Projects & Consulting (Principal Security Architect)",
       period: "Sept 2022 - April 2024",
       location: "India",
-      description: "Led enterprise security architecture practice for one of the world's largest IT services companies. Delivered security solutions for Fortune 500 clients across financial services, healthcare, and manufacturing sectors.",
+      description: "Designed and implemented security solutions closely with customers to meet requirements. Provided information security subject matter expertise for business processes across compiled/interpreted programs, database systems, web servers, firewalls, and middleware.",
       achievements: [
-        "Designed security architectures for 30+ enterprise transformation projects",
-        "Led ISO 27001 compliance programs achieving 100% audit success rate",
-        "Managed multi-cloud security implementations across AWS, Azure, and GCP",
-        "Implemented cloud security posture management for global enterprises"
+        "Performed Cloud security Assessment to identify gaps and propose security hardening actions",
+        "Designed and implemented AWS native security controls and set up policies and procedures",
+        "Prepared technical design documents (HLD, LLD, SOP), case studies and implementation plans",
+        "Worked on multi-vendor cloud and security controls: AWS, Azure, Palo Alto, F5, Barracuda, Prisma",
+        "Developed and maintained monitoring systems to detect anomalies and security breaches"
       ],
-      tech: ["AWS", "Azure", "Prisma Cloud", "ISO 27001", "Palo Alto", "F5"]
+      tech: ["AWS", "Azure", "Palo Alto", "F5", "Barracuda", "Prisma Cloud", "Security Assessment"]
     },
     {
       company: "Fortune 500 Technology Consulting Firm",
-      role: "Cyber Security Architect",
+      role: "Senior Associate - Projects (Cyber Security Architect)",
       period: "April 2021 - Sept 2022",
       location: "India",
-      description: "Architected cloud security solutions and SIEM/SOAR platforms for a leading global IT consulting firm. Managed security operations teams and delivered enterprise security programs.",
+      description: "Designed and developed security architecture for Azure and AWS Cloud environments including non-native security controls. Evaluated IT systems, appliances, and devices for security requirements and recommended mitigating controls.",
       achievements: [
-        "Deployed enterprise SIEM for 50+ corporate clients",
-        "Built automated security orchestration workflows",
-        "Led security architecture team of 15 professionals",
-        "Implemented zero trust network architecture for enterprise clients"
+        "Designed and developed security architecture for Azure Cloud Environment with non-native controls",
+        "Designed and developed security architecture for AWS Cloud with native and non-native solutions",
+        "Conducted Cloud security Assessment to identify gaps and propose hardening actions",
+        "Designed and implemented Microsoft Sentinel SIEM solution for cloud and on-premises security",
+        "Implemented SOAR solutions using Logic apps in Sentinel"
       ],
-      tech: ["Azure Sentinel", "Logic Apps", "SIEM", "Azure Security Center"]
+      tech: ["Azure", "AWS", "Microsoft Sentinel", "Logic Apps", "SIEM", "SOAR", "Cloud Security"]
     },
     {
       company: "International Executive Search Firm",
-      role: "Senior IT Analyst - Security",
+      role: "Senior IT Analyst - Network Infrastructure & Security",
       period: "Jan 2019 - Mar 2021",
       location: "India",
-      description: "Led cloud security transformation and infrastructure security for a prestigious global executive search firm. Managed enterprise firewall infrastructure and datacenter security operations.",
+      description: "Worked as SME & Security Architect for cloud adoption and migration. Served as key planner and contributor in Data center, Azure Cloud, and office migration projects.",
       achievements: [
-        "Executed zero-downtime datacenter migration project",
-        "Implemented Zero Trust security framework organization-wide",
-        "Managed next-generation firewall infrastructure",
-        "Reduced security incidents by 45% through proactive threat hunting"
+        "Served as key planner and contributor in Data center, Azure Cloud, and office migration",
+        "Key planner and executioner in Palo Alto firewall migration",
+        "Upgraded security systems by monitoring environment, identifying gaps, evaluating and implementing enhancements",
+        "Worked as project lead for Network Security and Automation across multiple regions"
       ],
-      tech: ["Palo Alto", "Zscaler", "Network Security", "Cloud Migration"]
+      tech: ["Palo Alto", "Azure", "Network Security", "Cloud Migration", "Automation"]
     },
     {
-      company: "Top 10 Global IT Services Company",
-      role: "Senior Security Engineer",
-      period: "April 2015 - Dec 2018",
+      company: "Global Telecommunications Equipment Leader",
+      role: "Engineer",
+      period: "April 2015 - Jan 2019",
       location: "India",
-      description: "Managed enterprise security operations and vulnerability management programs for a leading global IT services provider. Delivered security solutions for Fortune 500 clients.",
+      description: "Implemented security systems specifying intrusion detection methodologies and equipment. Directed equipment and software installation, prepared preventive and reactive measures, and provided technical support.",
       achievements: [
-        "Managed 24x7 security operations center (SOC)",
-        "Conducted security assessments and penetration testing",
-        "Implemented web application firewall (WAF) solutions",
-        "Mentored junior security engineers on security best practices"
+        "Worked as Team Lead for Cell Site router & Firewall migration project",
+        "Implemented security systems with intrusion detection methodologies and equipment",
+        "Worked on Azure Native Security Controls",
+        "Worked on Cloud Migration Project",
+        "Troubleshooting issues on Routers and Firewalls"
       ],
-      tech: ["Fortinet", "Cisco ASA", "Vulnerability Management", "SIEM"]
+      tech: ["Azure", "Routers", "Firewalls", "Cloud Migration", "Network Security"]
     },
     {
-      company: "Leading IT Services Provider",
-      role: "Network Security Engineer",
-      period: "July 2012 - March 2015",
+      company: "Leading Telecom Infrastructure Provider",
+      role: "Executive",
+      period: "Oct 2014 - April 2015",
       location: "India",
-      description: "Managed network security infrastructure and firewall operations for a global IT services company. Supported enterprise security operations and incident response.",
+      description: "Provided network support for telecommunications towers serving multiple operators. Managed firewall installation, troubleshooting, and network device operations.",
       achievements: [
-        "Managed enterprise firewall infrastructure and VPN solutions",
-        "Provided L2/L3 support for network security incidents",
-        "Implemented security policies and access control lists",
-        "Supported network security operations for global clients"
+        "Network Support for Towers of Airtel, Vodafone, Reliance, and other operators",
+        "Firewall installation and troubleshooting",
+        "Router and Switches installation and troubleshooting"
       ],
-      tech: ["Cisco ASA", "VPN", "Network Security", "Firewall Management"]
+      tech: ["Firewalls", "Routers", "Switches", "Network Support"]
+    },
+    {
+      company: "Global Telecommunications Equipment Company",
+      role: "AM Engineer",
+      period: "July 2012 - Oct 2014",
+      location: "India",
+      description: "Managed network monitoring and escalations for telecommunications infrastructure. Implemented new tools and handled security-related alerts and incidents.",
+      achievements: [
+        "Network Monitoring and Escalations",
+        "New Tools Implementation, Testing, and support",
+        "Working on Security related alerts and incidents"
+      ],
+      tech: ["Network Monitoring", "Security Alerts", "Incident Management"]
     }
   ];
 
@@ -243,6 +268,7 @@ const App = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
             <button onClick={() => scrollToSection('about')} className="hover:text-blue-400 transition-colors">About</button>
+            <button onClick={() => scrollToSection('projects')} className="hover:text-blue-400 transition-colors">Projects</button>
             <button onClick={() => scrollToSection('expertise')} className="hover:text-blue-400 transition-colors">Expertise</button>
             <button onClick={() => scrollToSection('experience')} className="hover:text-blue-400 transition-colors">Experience</button>
             <button onClick={() => scrollToSection('certifications')} className="hover:text-blue-400 transition-colors">Certifications</button>
@@ -261,6 +287,7 @@ const App = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-slate-800 p-6 flex flex-col gap-4 shadow-2xl">
             <button onClick={() => scrollToSection('about')} className="text-left text-slate-300 hover:text-blue-400">About</button>
+            <button onClick={() => scrollToSection('projects')} className="text-left text-slate-300 hover:text-blue-400">Projects</button>
             <button onClick={() => scrollToSection('expertise')} className="text-left text-slate-300 hover:text-blue-400">Expertise</button>
             <button onClick={() => scrollToSection('experience')} className="text-left text-slate-300 hover:text-blue-400">Experience</button>
             <button onClick={() => scrollToSection('contact')} className="text-left text-blue-400 font-bold">Contact</button>
@@ -293,7 +320,7 @@ const App = () => {
           </h1>
           
           <p className="text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
-            Enterprise Security Architect with 13+ years of experience leading comprehensive cyber security transformations across Fortune 500 companies. Specialized in enterprise security architecture, zero trust frameworks, SIEM/SOAR automation, and multi-cloud security. Proven track record of securing complex infrastructures while maintaining operational excellence.
+            Security Manager & Principal Security Architect with 13+ years in Cyber Security, Cloud Security & Network Security. Proficient in architecting and implementing Cloud security and Cyber Security solutions. Technically astute with ability to spearhead tasks independently with technical sophistication and finesse, in addition to awareness of latest trends and technological advancements.
           </p>
           
           <div className="flex flex-wrap gap-4">
@@ -358,6 +385,96 @@ const App = () => {
                 <div className="text-sm text-slate-400">{achievement.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Key Projects */}
+      <section id="projects" className="py-20 bg-slate-900 border-y border-slate-800">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <BookOpen className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Key Projects & Roles</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              Delivered enterprise-scale security solutions across diverse environments and technologies
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Security Manager, Reviewer & Approver</h3>
+              <p className="text-slate-400 text-sm">Led security governance and approval processes for enterprise infrastructure changes</p>
+            </div>
+            
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Security Architect, Designer & Implementer</h3>
+              <p className="text-slate-400 text-sm">Architected and deployed comprehensive security solutions across multi-cloud environments</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Open Source SIEM and SOAR Design & Development</h3>
+              <p className="text-slate-400 text-sm">Built custom security orchestration solutions using open-source technologies</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Azure Sentinel/SOAR Implementation</h3>
+              <p className="text-slate-400 text-sm">Deployed enterprise-grade Microsoft Sentinel with automated response workflows</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Azure & AWS Security Architecture</h3>
+              <p className="text-slate-400 text-sm">Designed security controls and next-gen firewall implementations for cloud infrastructures</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Zero Touch Vulnerability Management</h3>
+              <p className="text-slate-400 text-sm">Developed home-grown VM automation tool for continuous security assessment</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">CSPM Implementation</h3>
+              <p className="text-slate-400 text-sm">Deployed Cloud Security Posture Management across multi-cloud environments</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Firewall Assurance and Automation</h3>
+              <p className="text-slate-400 text-sm">Automated firewall policy management and compliance verification</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Cloud Security Assessment & ISO 27001</h3>
+              <p className="text-slate-400 text-sm">Conducted comprehensive security assessments and ISO 27001 readiness checks</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Azure OpenAI Deployment (Terraform)</h3>
+              <p className="text-slate-400 text-sm">Infrastructure as Code deployment of AI workloads with security controls</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Security Automation Suite</h3>
+              <p className="text-slate-400 text-sm">Integrated CrowdStrike XDR, Defender, Zscaler, Prisma SASE, AWS automation</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Zscaler Zero Trust Network Access</h3>
+              <p className="text-slate-400 text-sm">Implemented enterprise-wide ZTNA solution with secure access policies</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Palo Alto XSOAR Security Automation</h3>
+              <p className="text-slate-400 text-sm">Custom workflow design and playbook development for incident orchestration</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">DevSecOps Pipeline Integration</h3>
+              <p className="text-slate-400 text-sm">Implemented static/dynamic code analysis, vulnerability scanning, and container security</p>
+            </div>
+
+            <div className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-blue-500/50 transition-all">
+              <h3 className="text-lg font-bold text-blue-400 mb-2">Terraform Infrastructure Automation</h3>
+              <p className="text-slate-400 text-sm">Policy and infrastructure deployment via Infrastructure as Code frameworks</p>
+            </div>
           </div>
         </div>
       </section>
@@ -508,8 +625,8 @@ const App = () => {
             
             <div className="grid md:grid-cols-3 gap-4 mb-8 text-left max-w-2xl mx-auto">
               <div className="bg-blue-500/20 backdrop-blur-sm rounded-lg p-4 border border-blue-400/30">
-                <div className="text-blue-200 text-xs mb-1">Location</div>
-                <div className="text-white font-semibold">Gurgaon, India</div>
+                <div className="text-blue-200 text-xs mb-1">Contact</div>
+                <div className="text-white font-semibold">+91-9711634818</div>
               </div>
               <div className="bg-blue-500/20 backdrop-blur-sm rounded-lg p-4 border border-blue-400/30">
                 <div className="text-blue-200 text-xs mb-1">Work Mode</div>
