@@ -198,11 +198,7 @@ const Home = () => {
               Available for architectural consulting, security audits, and leadership roles. Let's discuss how I can help strengthen your enterprise security posture and drive digital transformation.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-4 mb-8 text-left max-w-2xl mx-auto">
-              <div className="bg-blue-500/20 backdrop-blur-sm rounded-lg p-4 border border-blue-400/30">
-                <div className="text-blue-200 text-xs mb-1">Contact</div>
-                <div className="text-white font-semibold">+91-9711634818</div>
-              </div>
+            <div className="grid md:grid-cols-2 gap-4 mb-8 text-left max-w-xl mx-auto">
               <div className="bg-blue-500/20 backdrop-blur-sm rounded-lg p-4 border border-blue-400/30">
                 <div className="text-blue-200 text-xs mb-1">Work Mode</div>
                 <div className="text-white font-semibold">Hybrid / Remote</div>
