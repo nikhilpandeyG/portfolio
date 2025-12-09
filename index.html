@@ -7,6 +7,49 @@
     <meta name="description" content="Nikhil Pandey - Enterprise Security Architect specializing in Cloud Security, Cyber Defense, and DevSecOps" />
     <meta name="keywords" content="Security Architect, Cloud Security, Azure, AWS, Cyber Security, DevSecOps" />
     <title>Nikhil Pandey - Security Architect Portfolio</title>
+    <style>
+      /* Additional protection styles */
+      body {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      img {
+        pointer-events: none;
+      }
+    </style>
+    <script>
+      // Disable developer tools detection
+      (function() {
+        const devtools = /./;
+        devtools.toString = function() {
+          this.opened = true;
+        };
+        console.log('%c', devtools);
+        
+        // Clear console to prevent inspection
+        console.clear();
+        
+        // Override console methods
+        if (typeof console !== 'undefined') {
+          console.log = console.error = console.warn = console.info = function() {};
+        }
+      })();
+      
+      // Disable right-click and keyboard shortcuts
+      document.addEventListener('contextmenu', e => e.preventDefault());
+      document.addEventListener('keydown', e => {
+        if (e.key === 'F12' || 
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+            (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S'))) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    </script>
   </head>
   <body>
     <div id="root"></div>

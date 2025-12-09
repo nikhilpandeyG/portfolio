@@ -20,6 +20,55 @@ const Layout = ({ children }) => {
     window.scrollTo(0, 0);
   }, [location]);
 
+  // Disable right-click context menu
+  useEffect(() => {
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    const handleKeyDown = (e) => {
+      // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+Shift+C
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+        (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S'))
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    };
+
+    const handleCopy = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    const handleCut = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    const handleDragStart = (e) => {
+      e.preventDefault();
+      return false;
+    };
+
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('copy', handleCopy);
+    document.addEventListener('cut', handleCut);
+    document.addEventListener('dragstart', handleDragStart);
+
+    return () => {
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('copy', handleCopy);
+      document.removeEventListener('cut', handleCut);
+      document.removeEventListener('dragstart', handleDragStart);
+    };
+  }, []);
+
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/projects', label: 'Projects' },
@@ -91,11 +140,12 @@ const Layout = ({ children }) => {
       </nav>
 
       {/* Main Content */}
-      <main>{children}</main>
+      <main className="select-none">{children}</main>
 
       {/* Footer */}
       <footer className="text-center py-8 text-slate-500 text-sm border-t border-slate-800">
         <p>© {new Date().getFullYear()} Nikhil Pandey. All rights reserved.</p>
+        <p className="text-xs mt-1 text-slate-600">Content is protected. Unauthorized copying is prohibited.</p>
         <div className="flex items-center justify-center gap-2 mt-2">
           <Globe className="w-3 h-3" />
           <span>Hosted on Microsoft Azure</span>
