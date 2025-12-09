@@ -45,33 +45,68 @@ const Home = () => {
           <div className="absolute left-0 bottom-0 w-1/3 h-1/3 bg-cyan-500 blur-[100px] rounded-full mix-blend-screen"></div>
         </div>
 
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800 text-blue-400 text-xs font-semibold mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-            </span>
-            OPEN TO CONSULTING & LEADERSHIP ROLES
-          </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Architecting <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-              Enterprise Security Solutions
-            </span>
-          </h1>
-          
-          <p className="text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
-            Security Manager & Principal Security Architect with 13+ years in Cyber Security, Cloud Security & Network Security. Proficient in architecting and implementing Cloud security and Cyber Security solutions. Technically astute with ability to spearhead tasks independently with technical sophistication and finesse, in addition to awareness of latest trends and technological advancements.
-          </p>
-          
-          <div className="flex flex-wrap gap-4">
-            <a href="#contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
-              <Mail className="w-5 h-5" /> Get in Touch
-            </a>
-            <a href="https://linkedin.com/in/nikhilpandeyg" target="_blank" rel="noreferrer" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-semibold transition-all flex items-center gap-2 border border-slate-700">
-              <Linkedin className="w-5 h-5" /> LinkedIn Profile
-            </a>
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-800 text-blue-400 text-xs font-semibold mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                OPEN TO CONSULTING & LEADERSHIP ROLES
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                Architecting <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                  Enterprise Security Solutions
+                </span>
+              </h1>
+              
+              <p className="text-xl text-slate-400 max-w-2xl mb-10 leading-relaxed">
+                Security Manager & Principal Security Architect with 13+ years in Cyber Security, Cloud Security & Network Security. Proficient in architecting and implementing Cloud security and Cyber Security solutions. Technically astute with ability to spearhead tasks independently with technical sophistication and finesse, in addition to awareness of latest trends and technological advancements.
+              </p>
+              
+              <div className="flex flex-wrap gap-4">
+                <a href="#contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white rounded-lg font-semibold transition-all flex items-center gap-2 shadow-lg shadow-blue-900/20">
+                  <Mail className="w-5 h-5" /> Get in Touch
+                </a>
+                <a href="https://linkedin.com/in/nikhilpandeyg" target="_blank" rel="noreferrer" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-semibold transition-all flex items-center gap-2 border border-slate-700">
+                  <Linkedin className="w-5 h-5" /> LinkedIn Profile
+                </a>
+              </div>
+            </div>
+
+            {/* Right Column - Profile Photo */}
+            <div className="hidden md:flex justify-center items-center">
+              <div className="relative">
+                {/* Decorative elements */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full opacity-20 blur-2xl"></div>
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-30 animate-pulse"></div>
+                
+                {/* Profile Image */}
+                <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-blue-500/50 shadow-2xl shadow-blue-900/50 ring-4 ring-blue-900/20">
+                  <img 
+                    src="/images/profile.jpg" 
+                    alt="Nikhil Pandey - Security Architect"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.parentElement.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center"><svg class="w-32 h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></div>';
+                    }}
+                  />
+                </div>
+                
+                {/* Floating badges */}
+                <div className="absolute -top-2 -right-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-bounce">
+                  13+ Years
+                </div>
+                <div className="absolute -bottom-2 -left-2 bg-cyan-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  20+ Certs
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
