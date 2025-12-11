@@ -8,7 +8,10 @@ import {
   Zap,
   Users,
   TrendingUp,
-  CheckCircle2
+  CheckCircle2,
+  Award,
+  Briefcase,
+  ArrowRight
 } from 'lucide-react';
 
 const Home = () => {
