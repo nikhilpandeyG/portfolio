@@ -80,33 +80,40 @@ const Layout = ({ children }) => {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-50 transition-all ${isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-800 shadow-lg' : 'bg-transparent'}`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'glass-strong shadow-2xl shadow-purple-900/10' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold tracking-tighter flex items-center gap-2 py-4">
-            <Shield className="w-8 h-8 text-blue-500" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-300">
+          <Link to="/" className="text-2xl font-bold tracking-tight flex items-center gap-3 py-5 group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <Shield className="w-8 h-8 text-white relative" />
+            </div>
+            <span className="gradient-text font-black">
               NIKHIL PANDEY
             </span>
           </Link>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`hover:text-blue-400 transition-colors ${
-                  location.pathname === link.path ? 'text-blue-400' : ''
-                }`}
+                className={`relative px-3 py-2 transition-all duration-300 hover:text-white ${
+                  location.pathname === link.path ? 'text-white' : ''
+                } group`}
               >
                 {link.label}
+                <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 transition-all duration-300 ${
+                  location.pathname === link.path ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                }`}></span>
               </Link>
             ))}
             <a
               href="/#contact"
-              className="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white transition-all"
+              className="relative px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold overflow-hidden group transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/50"
             >
-              Contact Me
+              <span className="relative z-10">Contact Me</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
           </div>
 
