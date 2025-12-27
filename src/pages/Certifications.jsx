@@ -137,22 +137,19 @@ const Certifications = () => {
       degree: "Post Graduate Diploma in Cyber Law and Cyber Forensic (PGDCLCF)",
       institution: "National Law School of India University",
       year: "2024 - 2025",
-      focus: "Cyber Law and Cyber Forensic",
-      grade: "Grade A"
+      focus: "Cyber Law and Cyber Forensic"
     },
     {
       degree: "Master's in Information Security (MSc Infosec.)",
       institution: "Indira Gandhi National Open University",
       year: "2022 - 2024",
-      focus: "Information Security",
-      grade: "First Division"
+      focus: "Information Security"
     },
     {
       degree: "Bachelor of Technology (B.Tech)",
       institution: "IEC College of Engineering & Technology",
       year: "2007 - 2011",
-      focus: "Electronics & Communication Engineering",
-      grade: "First Division"
+      focus: "Electronics & Communication Engineering"
     }
   ];
 
