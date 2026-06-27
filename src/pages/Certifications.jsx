@@ -13,13 +13,19 @@ const Certifications = () => {
     {
       name: "CISSP - Certified Information Systems Security Professional",
       provider: "ISC2",
-      logo: "https://images.credly.com/size/340x340/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
+      badge: {
+        label: "CISSP",
+        issuer: "ISC2"
+      },
       color: "from-emerald-600 to-teal-600"
     },
     {
       name: "CISM - Certified Information Security Manager",
       provider: "ISACA",
-      logo: "https://www.isaca.org/-/media/images/isacadp/project/isaca/logos/isaca-logo.svg",
+      badge: {
+        label: "CISM",
+        issuer: "ISACA"
+      },
       color: "from-sky-600 to-blue-700"
     },
     {
@@ -212,7 +218,13 @@ const Certifications = () => {
                 <div className="flex items-start gap-6">
                   <div className={`w-24 h-24 rounded-xl bg-gradient-to-br ${cert.color} p-1 flex-shrink-0 shadow-lg`}>
                     <div className="w-full h-full bg-white rounded-lg flex items-center justify-center p-3">
-                      {imageErrors[idx] ? (
+                      {cert.badge ? (
+                        <div className={`w-full h-full flex flex-col items-center justify-center rounded-lg bg-gradient-to-br ${cert.color} text-white text-center`}>
+                          <span className="text-[10px] font-bold uppercase tracking-widest opacity-90">{cert.badge.issuer}</span>
+                          <span className="text-2xl font-black tracking-wide leading-none mt-1">{cert.badge.label}</span>
+                          <span className="mt-2 h-1 w-8 rounded-full bg-white/70"></span>
+                        </div>
+                      ) : imageErrors[idx] ? (
                         <div className={`w-full h-full flex items-center justify-center bg-gradient-to-br ${cert.color} rounded-lg`}>
                           <Award className="w-12 h-12 text-white" />
                         </div>

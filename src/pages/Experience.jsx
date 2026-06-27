@@ -138,7 +138,7 @@ const Experience = () => {
           <Briefcase className="w-12 h-12 text-blue-400 mx-auto mb-4" />
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Professional Experience</h1>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            13+ years of progressive leadership across global enterprises and Fortune 500 companies
+            14+ years of progressive leadership across global enterprises and Fortune 500 companies
           </p>
         </div>
 

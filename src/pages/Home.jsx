@@ -17,7 +17,7 @@ import {
 const Home = () => {
   const achievements = [
     {
-      metric: "13+",
+      metric: "14+",
       label: "Years of Experience",
       icon: <TrendingUp className="w-6 h-6" />
     },
@@ -89,7 +89,7 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-slate-400 max-w-xl leading-relaxed font-light">
-                Security Manager & Principal Security Architect with <span className="text-purple-400 font-semibold">13+ years</span> in Cyber Security, Cloud Security & Network Security. Proficient in architecting and implementing cutting-edge security solutions with technical sophistication and awareness of latest industry trends. Expanding enterprise security programs across AI Security, Generative AI governance, LLM threat modeling, and autonomous SOC operations.
+                Security Manager & Principal Security Architect with <span className="text-purple-400 font-semibold">14+ years</span> in Cyber Security, Cloud Security & Network Security. Proficient in architecting and implementing cutting-edge security solutions with technical sophistication and awareness of latest industry trends. Expanding enterprise security programs across AI Security, Agentic AI, Generative AI governance, LLM threat modeling, and autonomous SOC operations.
               </p>
               
               <div className="flex flex-wrap gap-4 pt-4">
@@ -129,7 +129,7 @@ const Home = () => {
                 {/* Floating badges with new design */}
                 <div className="absolute -top-4 -right-4 glass-strong px-5 py-3 rounded-2xl text-sm font-bold shadow-xl border border-purple-500/20">
                   <div className="text-purple-400 text-xs font-mono">EXPERIENCE</div>
-                  <div className="text-white text-lg">13+ Years</div>
+                  <div className="text-white text-lg">14+ Years</div>
                 </div>
                 <div className="absolute -bottom-4 -left-4 glass-strong px-5 py-3 rounded-2xl text-sm font-bold shadow-xl border border-pink-500/20">
                   <div className="text-pink-400 text-xs font-mono">CERTIFIED</div>
@@ -189,9 +189,9 @@ const Home = () => {
               <div className="mb-6 p-4 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-2xl w-fit">
                 <Shield className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">AI Security Governance</h3>
+              <h3 className="text-2xl font-bold mb-4">AI & Agentic AI Security</h3>
               <p className="text-slate-400 leading-relaxed font-light">
-                Designed enterprise AI security controls aligned to ISO/IEC 42001, OWASP LLM Top 10, and NIST AI RMF, including prompt-injection defense and model access governance.
+                Designed enterprise AI and Agentic AI security controls aligned to ISO/IEC 42001, OWASP LLM Top 10, and NIST AI RMF, including prompt-injection defense and model access governance.
               </p>
             </div>
           </div>
@@ -271,7 +271,7 @@ const Home = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 group-hover:gradient-text transition-all">Experience</h3>
                 <p className="text-slate-400 text-sm leading-relaxed font-light mb-4">
-                  13+ years leading security teams at Fortune 500 companies
+                  14+ years leading security teams at Fortune 500 companies
                 </p>
                 <div className="flex items-center gap-2 text-blue-400 font-semibold text-sm">
                   View Timeline <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -312,9 +312,9 @@ const Home = () => {
               Let's discuss how I can help secure your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="mailto:contact@nikhilpandey.com" className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl font-bold transition-all flex items-center gap-3 text-lg shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 hover:-translate-y-1">
+              <a href="mailto:contact@pandeynikhil.in" className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-2xl font-bold transition-all flex items-center gap-3 text-lg shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 hover:-translate-y-1">
                 <Mail className="w-6 h-6" /> 
-                <span>contact@nikhilpandey.com</span>
+                <span>contact@pandeynikhil.in</span>
               </a>
               <a href="https://linkedin.com/in/nikhilpandeyg" target="_blank" rel="noreferrer" className="group px-10 py-5 glass-strong text-white rounded-2xl font-bold transition-all flex items-center gap-3 text-lg hover:border-purple-500/50 hover:-translate-y-1">
                 <Linkedin className="w-6 h-6" /> 
