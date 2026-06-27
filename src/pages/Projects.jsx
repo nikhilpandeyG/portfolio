@@ -63,6 +63,30 @@ const Projects = () => {
     {
       title: "Terraform Infrastructure Automation",
       description: "Policy and infrastructure deployment via Infrastructure as Code frameworks"
+    },
+    {
+      title: "AI Security Governance Framework",
+      description: "Designed enterprise AI security controls aligned to ISO/IEC 42001, OWASP LLM Top 10, and NIST AI RMF"
+    },
+    {
+      title: "Secure GenAI Platform",
+      description: "Architected secure Azure OpenAI landing zones with prompt-injection, data-exfiltration, and model access controls"
+    },
+    {
+      title: "Autonomous Vulnerability Management",
+      description: "Engineered AI-driven risk prioritisation and automated remediation workflows achieving 98% SLA compliance"
+    },
+    {
+      title: "AIOps Autonomous SOC",
+      description: "Automated L1 alert triage and incident correlation across QRadar, Sentinel, and Securonix platforms"
+    },
+    {
+      title: "Security Data Lake & Analytics",
+      description: "Integrated XDR, SIEM, cloud, endpoint, Zscaler, Defender, and network telemetry for AI-powered threat hunting"
+    },
+    {
+      title: "Shift-Left DevSecOps Integration",
+      description: "Embedded SAST, DAST, SCA, and IaC scanning into SDLC pipelines to identify vulnerabilities earlier"
     }
   ];
 

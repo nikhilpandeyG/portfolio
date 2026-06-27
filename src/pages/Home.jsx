@@ -35,6 +35,21 @@ const Home = () => {
       metric: "70%",
       label: "Incident Response Time Reduction",
       icon: <Zap className="w-6 h-6" />
+    },
+    {
+      metric: "40%",
+      label: "Enterprise Risk Exposure Reduction",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      metric: "98%",
+      label: "Vulnerability Remediation Within SLA",
+      icon: <CheckCircle2 className="w-6 h-6" />
+    },
+    {
+      metric: "60%",
+      label: "SOC Analyst Toil Reduction",
+      icon: <Zap className="w-6 h-6" />
     }
   ];
 
@@ -74,7 +89,7 @@ const Home = () => {
               </div>
               
               <p className="text-lg text-slate-400 max-w-xl leading-relaxed font-light">
-                Security Manager & Principal Security Architect with <span className="text-purple-400 font-semibold">13+ years</span> in Cyber Security, Cloud Security & Network Security. Proficient in architecting and implementing cutting-edge security solutions with technical sophistication and awareness of latest industry trends.
+                Security Manager & Principal Security Architect with <span className="text-purple-400 font-semibold">13+ years</span> in Cyber Security, Cloud Security & Network Security. Proficient in architecting and implementing cutting-edge security solutions with technical sophistication and awareness of latest industry trends. Expanding enterprise security programs across AI Security, Generative AI governance, LLM threat modeling, and autonomous SOC operations.
               </p>
               
               <div className="flex flex-wrap gap-4 pt-4">
@@ -139,7 +154,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="group glass-strong rounded-3xl p-8 hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-1">
               <div className="mb-6 p-4 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl w-fit">
                 <Target className="w-8 h-8 text-purple-400" />
@@ -167,6 +182,16 @@ const Home = () => {
               <h3 className="text-2xl font-bold mb-4">Multi-Cloud Expert</h3>
               <p className="text-slate-400 leading-relaxed font-light">
                 Deep expertise across Azure, AWS, GCP, and Oracle Cloud with proven ability to design cloud-native security controls and zero trust frameworks.
+              </p>
+            </div>
+
+            <div className="group glass-strong rounded-3xl p-8 hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-1">
+              <div className="mb-6 p-4 bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-2xl w-fit">
+                <Shield className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4">AI Security Governance</h3>
+              <p className="text-slate-400 leading-relaxed font-light">
+                Designed enterprise AI security controls aligned to ISO/IEC 42001, OWASP LLM Top 10, and NIST AI RMF, including prompt-injection defense and model access governance.
               </p>
             </div>
           </div>

@@ -7,12 +7,17 @@ const Expertise = () => {
     {
       category: "Enterprise & Cloud Security",
       icon: <Cloud className="w-6 h-6 text-blue-400" />,
-      items: ["Microsoft Azure", "AWS", "Google Cloud", "Oracle Cloud", "Wiz", "Prisma Cloud", "CloudGuard", "Azure Security Center"]
+      items: ["Microsoft Azure", "AWS", "Google Cloud", "Oracle Cloud", "Kubernetes", "Wiz", "Prisma Cloud", "CloudGuard", "AWS Security Hub", "Azure Security Center"]
+    },
+    {
+      category: "AI Security & GenAI Governance",
+      icon: <Shield className="w-6 h-6 text-blue-400" />,
+      items: ["ISO/IEC 42001 AI Management Systems", "OWASP LLM Top 10", "NIST AI RMF", "LLM Threat Modelling", "Adversarial ML Defense", "Model Integrity Checks", "Prompt-Injection Controls", "AI Model Access Governance"]
     },
     {
       category: "Cyber Defense",
       icon: <Shield className="w-6 h-6 text-blue-400" />,
-      items: ["Zero Trust Network Access", "SOAR", "SIEM (Sentinel, QRadar, Securonix)", "Vulnerability Management (Qualys, Tenable, Rapid7)", "Endpoint Protection (CrowdStrike, Defender)"]
+      items: ["Zero Trust Network Access", "SOAR", "SIEM (Sentinel, QRadar, Securonix)", "XDR", "AIOps", "Vulnerability Management (Qualys, Tenable, Rapid7)", "Endpoint Protection (CrowdStrike, Defender)"]
     },
     {
       category: "Network Security",
@@ -22,17 +27,22 @@ const Expertise = () => {
     {
       category: "Automation & DevSecOps",
       icon: <Terminal className="w-6 h-6 text-blue-400" />,
-      items: ["Terraform (IaaC)", "Python", "Shell Scripting", "GitLab CI/CD", "Logic Apps", "XSOAR Playbooks", "Ansible"]
+      items: ["Terraform (IaaC)", "Python", "Shell Scripting", "GitLab CI/CD", "Logic Apps", "XSOAR Playbooks", "KQL Analytics", "SAST", "DAST", "SCA", "IaC Scanning", "Ansible"]
     },
     {
       category: "GRC & Compliance",
       icon: <Lock className="w-6 h-6 text-blue-400" />,
-      items: ["Cloud Security Assessment", "Enterprise Security & Gap Assessment", "ISO 27001 Readiness Check", "Security Auditing", "Compliance Frameworks"]
+      items: ["Cloud Security Assessment", "Enterprise Security & Gap Assessment", "ISO 27001 Readiness Check", "SOC2", "GDPR", "CIS Benchmarks", "Security Auditing", "Compliance Frameworks"]
     },
     {
       category: "Security Tools & Platforms",
       icon: <Code className="w-6 h-6 text-blue-400" />,
       items: ["Zscaler ZIA/ZPA", "Prisma Access", "AWS Security Hub", "Nmap", "Burp Suite", "Metasploit", "Wireshark", "Nagios", "ForeScout"]
+    },
+    {
+      category: "Security Data Engineering",
+      icon: <Code className="w-6 h-6 text-blue-400" />,
+      items: ["Security Data Lake", "CrowdStrike XDR Telemetry", "Zscaler Telemetry", "Microsoft Defender Telemetry", "Network Security Telemetry", "AI-Driven Threat Analytics", "Threat Hunting Pipelines"]
     }
   ];
 

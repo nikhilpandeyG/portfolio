@@ -11,6 +11,24 @@ const Certifications = () => {
 
   const certifications = [
     {
+      name: "CISSP - Certified Information Systems Security Professional",
+      provider: "ISC2",
+      logo: "https://images.credly.com/size/340x340/images/80d8a06a-c384-42bf-ad36-db81bce5adce/blob",
+      color: "from-emerald-600 to-teal-600"
+    },
+    {
+      name: "CISM - Certified Information Security Manager",
+      provider: "ISACA",
+      logo: "https://www.isaca.org/-/media/images/isacadp/project/isaca/logos/isaca-logo.svg",
+      color: "from-sky-600 to-blue-700"
+    },
+    {
+      name: "Microsoft Certified: Cybersecurity Architect Expert",
+      provider: "Microsoft",
+      logo: "https://images.credly.com/size/340x340/images/0ba22331-acf9-4e8a-8ce3-b4cc3d376040/image.png",
+      color: "from-blue-500 to-indigo-600"
+    },
+    {
       name: "Microsoft Certified Azure Solutions Architect Expert",
       provider: "Microsoft",
       logo: "https://images.credly.com/size/340x340/images/987adb7e-49be-4e24-b67e-55986bd3fe66/azure-solutions-architect-expert-600x600.png",
@@ -21,6 +39,12 @@ const Certifications = () => {
       provider: "Amazon Web Services",
       logo: "https://images.credly.com/size/340x340/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png",
       color: "from-orange-500 to-yellow-500"
+    },
+    {
+      name: "AWS Certified Machine Learning - Specialty",
+      provider: "Amazon Web Services",
+      logo: "https://images.credly.com/size/340x340/images/0c6d9839-f468-4adc-987d-5cfae4a9ee67/image.png",
+      color: "from-orange-500 to-amber-500"
     },
     {
       name: "Google Professional Cloud Architect",
@@ -53,10 +77,22 @@ const Certifications = () => {
       color: "from-blue-600 to-indigo-600"
     },
     {
+      name: "Zscaler Digital Transformation Administrator (ZDTA)",
+      provider: "Zscaler",
+      logo: "https://www.zscaler.com/themes/custom/zscaler/logo.svg",
+      color: "from-blue-600 to-sky-600"
+    },
+    {
       name: "ISO/IEC 27001:2022 Lead Auditor",
       provider: "ISO",
       logo: "https://cdn-icons-png.flaticon.com/512/6404/6404100.png",
       color: "from-green-500 to-emerald-500"
+    },
+    {
+      name: "ISO/IEC 42001:2023 Lead Auditor",
+      provider: "ISO",
+      logo: "https://cdn-icons-png.flaticon.com/512/6404/6404100.png",
+      color: "from-emerald-500 to-cyan-500"
     },
     {
       name: "ISO/IEC 27001 Information Security Associate",
