@@ -115,3 +115,84 @@ img {
   border-radius: inherit;
   z-index: -1;
 }
+
+/* Light theme overrides for the Tailwind utility-based portfolio pages */
+.theme-light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.theme-light .bg-slate-950,
+.theme-light [class~="bg-[#0a0a0f]"] {
+  background-color: #f8fafc !important;
+}
+
+.theme-light .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+.theme-light .bg-slate-800 {
+  background-color: #e2e8f0 !important;
+}
+
+.theme-light .bg-slate-950\/50 {
+  background-color: rgba(248, 250, 252, 0.86) !important;
+}
+
+.theme-light .glass,
+.theme-light .glass-strong {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(15, 23, 42, 0.1);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
+}
+
+.theme-light .text-white,
+.theme-light .text-slate-100,
+.theme-light .text-slate-300 {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-400 {
+  color: #475569 !important;
+}
+
+.theme-light .text-slate-500,
+.theme-light .text-slate-600 {
+  color: #64748b !important;
+}
+
+.theme-light .border-slate-800,
+.theme-light .border-white\/5 {
+  border-color: #dbe3ef !important;
+}
+
+.theme-light .theme-toggle {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(15, 23, 42, 0.14);
+  color: #334155 !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+}
+
+.theme-light .bg-gradient-to-r.text-white,
+.theme-light .bg-gradient-to-br.text-white,
+.theme-light .bg-gradient-to-r .text-white,
+.theme-light .bg-gradient-to-br .text-white {
+  color: #ffffff !important;
+}
+
+.theme-light .hover\:text-white:hover {
+  color: #111827 !important;
+}
+
+.theme-light .hover\:border-blue-500\/50:hover,
+.theme-light .hover\:border-purple-500\/30:hover,
+.theme-light .hover\:border-purple-500\/50:hover,
+.theme-light .hover\:border-pink-500\/50:hover,
+.theme-light .hover\:border-green-500\/50:hover,
+.theme-light .hover\:border-yellow-500\/50:hover {
+  border-color: rgba(99, 102, 241, 0.55) !important;
+}
+
+.theme-light footer {
+  background: #ffffff;
+}

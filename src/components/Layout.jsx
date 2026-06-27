@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Shield, Menu, X, Globe } from 'lucide-react';
+import { Shield, Menu, X, Globe, Sun, Moon } from 'lucide-react';
 
 const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    if (typeof window === 'undefined') {
+      return 'dark';
+    }
+
+    return window.localStorage.getItem('portfolio-theme') || 'dark';
+  });
   const location = useLocation();
 
   useEffect(() => {
@@ -19,6 +26,11 @@ const Layout = ({ children }) => {
     setIsMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location]);
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    window.localStorage.setItem('portfolio-theme', theme);
+  }, [theme]);
 
   // Disable right-click context menu
   useEffect(() => {
@@ -77,8 +89,14 @@ const Layout = ({ children }) => {
     { path: '/certifications', label: 'Certifications' }
   ];
 
+  const toggleTheme = () => {
+    setTheme((currentTheme) => (currentTheme === 'dark' ? 'light' : 'dark'));
+  };
+
+  const isLightTheme = theme === 'light';
+
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className={`theme-${theme} min-h-screen bg-slate-950 text-white transition-colors duration-300`}>
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? 'glass-strong shadow-2xl shadow-purple-900/10' : 'bg-transparent'}`}>
         <div className="container mx-auto px-6 flex justify-between items-center">
@@ -115,12 +133,32 @@ const Layout = ({ children }) => {
               <span className="relative z-10">Contact Me</span>
               <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={isLightTheme ? 'Switch to dark theme' : 'Switch to light theme'}
+              title={isLightTheme ? 'Switch to dark theme' : 'Switch to light theme'}
+              className="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-300 hover:border-purple-500/50 hover:text-white"
+            >
+              {isLightTheme ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+            </button>
           </div>
 
           {/* Mobile Toggle */}
-          <button className="md:hidden text-slate-300" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X /> : <Menu />}
-          </button>
+          <div className="md:hidden flex items-center gap-3">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={isLightTheme ? 'Switch to dark theme' : 'Switch to light theme'}
+              title={isLightTheme ? 'Switch to dark theme' : 'Switch to light theme'}
+              className="theme-toggle inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-300"
+            >
+              {isLightTheme ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+            </button>
+            <button className="text-slate-300" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
