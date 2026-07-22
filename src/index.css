@@ -22,11 +22,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
+  color: #0f172a;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
+}
+
+#root {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #0f172a;
 }
 
 * {
@@ -148,17 +155,24 @@ img {
 
 .theme-light .text-white,
 .theme-light .text-slate-100,
+.theme-light .text-slate-200,
 .theme-light .text-slate-300 {
   color: #0f172a !important;
 }
 
 .theme-light .text-slate-400 {
-  color: #475569 !important;
+  color: #334155 !important;
 }
 
 .theme-light .text-slate-500,
 .theme-light .text-slate-600 {
-  color: #64748b !important;
+  color: #475569 !important;
+}
+
+.theme-light .text-slate-700,
+.theme-light .text-slate-800,
+.theme-light .text-slate-900 {
+  color: #0f172a !important;
 }
 
 .theme-light .border-slate-800,

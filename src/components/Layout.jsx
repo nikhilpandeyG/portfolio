@@ -7,10 +7,10 @@ const Layout = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState(() => {
     if (typeof window === 'undefined') {
-      return 'dark';
+      return 'light';
     }
 
-    return window.localStorage.getItem('portfolio-theme') || 'dark';
+    return window.localStorage.getItem('portfolio-theme') || 'light';
   });
   const location = useLocation();
 
