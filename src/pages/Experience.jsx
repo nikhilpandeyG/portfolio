@@ -127,6 +127,34 @@ const Experience = () => {
     }
   ];
 
+  const careerRoadmap = [
+    {
+      period: 'Latest',
+      title: 'Security Engineering Manager',
+      details: 'Expanded into Data Engineering Manager responsibilities and senior leadership across JAPAC and North America managed services.'
+    },
+    {
+      period: 'Earlier Leadership',
+      title: 'Senior Associate Cyber Security -> Manager Cyber Security Architect',
+      details: 'Moved from senior associate delivery into architecture leadership with broader design and governance ownership.'
+    },
+    {
+      period: 'Infrastructure Leadership',
+      title: 'Senior IT Analyst -> Team Lead Infrastructure & Security',
+      details: 'Transitioned into team leadership with stronger focus on infrastructure security and operational ownership.'
+    },
+    {
+      period: 'SOC Operations',
+      title: 'Engineer Networks and Security -> Team Lead SOC',
+      details: 'Advanced from hands-on network and security engineering into SOC leadership and coordination.'
+    },
+    {
+      period: 'Foundation Roles',
+      title: 'Network Security Engineer -> SPOC SOC',
+      details: 'Built the operational base through network security engineering and SOC single-point-of-contact responsibilities.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-slate-950 text-white py-20">
       <div className="container mx-auto px-6">
@@ -140,6 +168,36 @@ const Experience = () => {
           <p className="text-slate-400 max-w-2xl mx-auto">
             14+ years of progressive leadership across global enterprises and Fortune 500 companies
           </p>
+        </div>
+
+        <div className="mb-20 max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-block px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-blue-400 text-xs font-bold mb-4">
+              CAREER ROADMAP
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">Role progression from latest to first</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">
+              A concise progression view that matches the home page roadmap and shows the order of advancement across roles.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {careerRoadmap.map((step, idx) => (
+              <div key={step.title} className="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-blue-500/50 transition-all">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.3em] text-blue-400 font-semibold mb-2">
+                      {step.period}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{idx + 1}. {step.title}</h3>
+                  </div>
+                  <div className="text-sm text-slate-400 max-w-2xl md:text-right">
+                    {step.details}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="space-y-8 max-w-5xl mx-auto">

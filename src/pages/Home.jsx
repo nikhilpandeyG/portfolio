@@ -53,6 +53,39 @@ const Home = () => {
     }
   ];
 
+  const careerRoadmap = [
+    {
+      company: 'Latest Company',
+      period: 'Current',
+      milestones: [
+        'Security Engineering Manager',
+        'Added responsibility as Data Engineering Manager',
+        'Senior Manager - JAPAC region',
+        'Managed Services North America head'
+      ]
+    },
+    {
+      company: 'Cyber Security Leadership Track',
+      period: '2021 - 2024',
+      milestones: [
+        'Senior Associate - Cyber Security',
+        'Manager - Cyber Security Architect',
+        'Senior IT Analyst',
+        'Team Lead - Infrastructure & Security'
+      ]
+    },
+    {
+      company: 'Network & SOC Foundations',
+      period: '2012 - 2021',
+      milestones: [
+        'Engineer - Networks and Security',
+        'Team Lead - SOC',
+        'Network Security Engineer',
+        'SPOC - SOC'
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-white">
       {/* Hero Section */}
@@ -294,6 +327,59 @@ const Home = () => {
                 </div>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Career Roadmap */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16">
+            <div className="inline-block px-4 py-2 rounded-full glass border border-purple-500/20 text-purple-400 text-xs font-bold mb-4 backdrop-blur-sm">
+              CAREER ROADMAP
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black mb-4">Progression From Latest Role To First Role</h2>
+            <p className="text-slate-400 max-w-3xl mx-auto font-light">
+              A compact view of the role transitions behind the full experience timeline, ordered from the latest responsibility back to the first job.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {careerRoadmap.map((stage, stageIndex) => (
+              <div key={stage.company} className="glass-strong rounded-3xl border border-white/5 p-6 md:p-8">
+                <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between mb-6">
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.35em] text-purple-400 font-semibold mb-2">
+                      {stage.period}
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{stage.company}</h3>
+                  </div>
+                  <div className="text-sm text-slate-400 md:text-right max-w-sm">
+                    Latest role first, then the earlier transitions that built the current leadership path.
+                  </div>
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                  {stage.milestones.map((milestone, milestoneIndex) => (
+                    <div
+                      key={milestone}
+                      className="relative rounded-2xl border border-white/5 bg-slate-950/50 p-5"
+                    >
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-pink-600 text-sm font-bold text-white">
+                          {milestoneIndex + 1}
+                        </div>
+                        <div className="h-px flex-1 bg-white/10"></div>
+                        {stageIndex < careerRoadmap.length - 1 && milestoneIndex === stage.milestones.length - 1 ? (
+                          <ArrowRight className="w-4 h-4 text-purple-400 rotate-90 md:rotate-0" />
+                        ) : null}
+                      </div>
+                      <p className="text-sm leading-relaxed text-slate-200">{milestone}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
