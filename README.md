@@ -1,6 +1,15 @@
-# Portfolio - Security Architect Website
+# Nikhil Pandey | Security Architect Portfolio
 
-Enterprise Security Architect portfolio showcasing cloud security expertise, certifications, and professional experience.
+Personal portfolio for **Nikhil Pandey**, an Enterprise Security Architect focused on cloud security, cyber defense, and DevSecOps.
+
+**Live site:** https://nikhilpandeyG.github.io/portfolio/
+
+## What is included
+
+- Security architecture and cloud expertise
+- Professional experience and selected projects
+- Certifications and technical capabilities
+- Responsive React interface for desktop and mobile
 
 ## Tech Stack
 
@@ -26,65 +35,21 @@ Enterprise Security Architect portfolio showcasing cloud security expertise, cer
    npm run build
    ```
 
-## Deployment to Azure Static Web Apps
+## Deployment
 
-### Prerequisites
-- Azure account
-- Azure CLI or Azure Static Web Apps CLI
-- Node.js 18+ installed
+Every push to `master` builds and deploys the site through GitHub Actions and GitHub Pages. The workflow is defined in `.github/workflows/deploy-pages.yml`.
 
-### Option 1: Deploy using Azure Static Web Apps CLI (Recommended)
+To enable it for a new repository:
 
-1. **Install the Static Web Apps CLI:**
-   ```bash
-   npm install -g @azure/static-web-apps-cli
-   ```
-
-2. **Build the application:**
-   ```bash
-   npm run build
-   ```
-
-3. **Deploy to Azure:**
-   ```bash
-   npx swa deploy --env production
-   ```
-
-### Option 2: Deploy via GitHub Actions
-
-1. Push your code to GitHub
-2. In Azure Portal, create a new Static Web App
-3. Connect to your GitHub repository
-4. Azure will automatically create a GitHub Actions workflow
-5. Configure build settings:
-   - **App location:** `/`
-   - **API location:** `` (leave empty)
-   - **Output location:** `dist`
-
-### Option 3: Deploy via Azure CLI
-
-```bash
-# Login to Azure
-az login
-
-# Create a resource group (if needed)
-az group create --name portfolio-rg --location eastus
-
-# Create Static Web App
-az staticwebapp create \
-  --name nikhil-portfolio \
-  --resource-group portfolio-rg \
-  --location eastus \
-  --source . \
-  --branch main \
-  --app-location "/" \
-  --output-location "dist"
-```
+1. Open **Settings > Pages** on GitHub.
+2. Set **Source** to **GitHub Actions**.
+3. Push to `master` and open the Pages URL shown in the workflow summary.
 
 ## Configuration Files
 
 - **vite.config.js** - Build configuration
 - **tailwind.config.js** - Tailwind CSS styling
+- **.github/workflows/deploy-pages.yml** - GitHub Pages deployment
 - **staticwebapp.config.json** - Azure Static Web Apps routing and security headers
 - **package.json** - Dependencies and scripts
 
